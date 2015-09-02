@@ -1,0 +1,123 @@
+<!--put components here -->
+<div class="col-md-12 col-xs-12">
+  <h4 class="col-md-12 col-xs-12 text-center ribbontitle">HOSPITALITY</h4>
+  <ul class="long-line col-md-12 col-xs-12 paddingReset clearfix">
+    <div class="longer-line col-md-12 col-xs-12 clearfix"></div>
+    <div class="col-md-2 col-xs-6">
+      <div class="node" id="intro">
+        <i class="fa fa-info hospi_icon"></i>
+        <h4 class="btmText left15">INTRODUCTION</h4>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-6">
+      <div class="node" id="instr">
+        <i class="fa fa-file hospi_icon"></i>
+        <h4 class="btmText left15">INSTRUCTIONS</h4>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-6">
+      <div class="node" id="accom">
+        <i class="fa fa-suitcase hospi_icon"></i>
+        <h4 class="btmText left15">ACCOMODATION</h4>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-6">
+      <div class="node" id="reachceg">
+        <i class="fa fa-map-marker hospi_icon"></i>
+        <h4 class="btmText">REACHING CEG</h4>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-6">
+      <div class="node" id="faq">
+        <i class="fa fa-question hospi_icon"></i>
+        <h4 class="btmText">FAQ</h4>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-6">
+      <div class="node" id="contact">
+        <i class="fa fa-mobile hospi_icon"></i>
+        <h4 class="btmText">CONTACT</h4>
+    </div>
+  </div>
+  </ul>
+</div>
+
+<!--hospi_content -->
+<div class="col-md-10 col-md-push-1 col-xs-12 hospiBox">
+  <div class="hospi_content">
+    <div class="header">
+      <!--insert pic here -->
+      
+    </div>
+    <h3 class="text-center title">INTRODUCTION</h3>
+    <div class="hospi_desc">
+      <p>Random lorem ipsum Random lorem ipsum Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+        Random lorem ipsum Random lorem ipsum
+      </p>
+      <p>Random lorem ipsum Random lorem ipsum Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+        Random lorem ipsum Random lorem ipsum
+      </p>
+      <p>Random lorem ipsum Random lorem ipsum Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+          Random lorem ipsum Random lorem ipsum
+        Random lorem ipsum Random lorem ipsum
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+$(".navbar-toggle").click(function(){
+  closeall();
+  
+});
+
+$(".node").click(function(){
+
+//scroll down in mobile
+if($(window).width()>=320 && $(window).width()<=960)
+  $('html,body').animate({'scrollTop':"450px"},800);
+else
+  $('html,body').animate({'scrollTop':"200px"},800);
+
+  $(".node").removeClass("node-active");
+  $(this).addClass("node-active");
+  $(".hospi_content").removeClass("hospi_animated");
+
+  var nodeid = $(this).attr("id");
+  if(nodeid == 'intro')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"8%"});
+  else if(nodeid == 'instr')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"24%"});
+  else if(nodeid == 'accom')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"40%"});
+  else if(nodeid == 'reachceg')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"57%"});
+  else if(nodeid == 'faq')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"74%"});
+  else if(nodeid == 'contact')
+  $(".longer-line").css({'background':"rgb(255,200,0)",'width':"100%"});
+
+setTimeout(function(){$(".hospi_content").addClass("hospi_animated");},500);
+
+});
+
+});
+
+</script>
